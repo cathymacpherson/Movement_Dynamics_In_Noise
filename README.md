@@ -3,7 +3,7 @@
 ## Overview
 This repository contains the analysis pipeline for two studies that examine the impact of background noise on the structure of postural dynamics and complexity matching, in naturalistic social interactions.
 
-Pairs of participants engaged in conversation under various levels of background noise. Movement data was collected via on-body sensors (Study 1) or pose estimation (Study 2). Root-mean-square (RMS) and alpha (via Detrended Fluctuation Analysis) were calculated for each movement time series. These values were also cross-correlated within pairs, to determine linear covariance (RMS) and complexity matching (alpha).
+Pairs of participants engaged in conversation under various levels of background noise. Movement data was collected via on-body sensors (Study 1) or pose estimation (Study 2). Root-mean-square (RMS) and alpha (via Detrended Fluctuation Analysis) were calculated for each movement time series. These values were also cross-correlated within pairs, to determine coordination of movement magnitude (RMS) and complexity matching (alpha).
 
 ## Set Up Instructions
 For new users, please refer to the set-up instructions [here](Setup/SETUP.md) for details on cloning this repository and setting up a virtual environment.
@@ -43,7 +43,7 @@ Movement_Dynamics_In_Noise/
    - RMS cross-correlation
    - Outputs saved to [`results/study1/`](results/study1/)
 
-2. **[mergeDatasets.ipynb](mergeDatasets.ipynb)**: Merges movement data with OIRs (Other-initiated repair sequences) data
+2. **[mergeDatasets.ipynb](mergeDatasets.ipynb)**: Merges movement data with OIRs (other-initiated repairs) data
 
 3. **[R_MEMs.ipynb](R_MEMs.ipynb)**: Implements functionality from `lmerTest` and `ggplot2` to:
    - Run Mixed-Effects Models (MEMs)
@@ -67,16 +67,16 @@ Movement_Dynamics_In_Noise/
 2. **[mergeDatasets.ipynb](mergeDatasets.ipynb)**: Merges movement data with OIRs data
 
 3. **[R_MEMs_Combined.ipynb](R_MEMs_Combined.ipynb)**: Implements functionality from `lmerTest` and `ggplot2` to:
-   - Run Mixed-Effects Models (MEMs)
-   - Create visualizations for both studies
-   - Generate figures for manuscript
+   - Runs Mixed-Effects Models (MEMs)
+   - Creates visualizations for both studies
+   - Generates figures for manuscript
 
 #### Stimuli Processing
 - **[dfaAudio.ipynb](dfaAudio.ipynb)**: Analyzes background noise audio files
   - Processes audio from [`stimuli/study2/`](stimuli/study2/)
 
 ### Supplementary Materials
-- **[R_MEMs_Supplementary.ipynb](R_MEMs_Supplementary.ipynb)**: This provides the statistical analyses and visualisations for information found in the supplementary materials of the paper listed below (Macpherson et al., submitted).
+- **[R_MEMs_Supplementary.ipynb](R_MEMs_Supplementary.ipynb)**: This provides the statistical analyses and visualisations for the supplementary materials of the paper listed below (Macpherson et al., submitted).
 
 ### Output Folders
 - **[`results/study1/`](results/study1/)**: Saves DFA, RMS, OIRS data, and correlation analyses for Study 1
