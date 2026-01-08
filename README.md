@@ -82,7 +82,7 @@ Movement_Dynamics_In_Noise/
 - **[`results/study1/`](results/study1/)**: Saves DFA, RMS, OIRS data, and correlation analyses for Study 1
 - **[`results/study2/`](results/study2/)**: Saves DFA, RMS, OIRS data, and correlation analyses for Study 2
 - **[`figures/manuscript/`](figures/manuscript/)**: Figures for the main manuscript
-- **[`figures/supp/`](figures/supplementary/)**: Supplementary figures
+- **[`figures/supplementary/`](figures/supplementary/)**: Supplementary figures
 
 ## Associated Publications
 Macpherson, M. C., Miles, K., Weisser, A., Luthy, B., Buchholz, J. M., Carlile, S., & Richardson, M. J. (submitted). Background noise shapes fractal dynamics and complexity matching during social interaction.

@@ -50,3 +50,6 @@ traitlets==5.14.3
 typing_extensions==4.15.0
 tzdata==2025.2
 wcwidth==0.2.13
+librosa==0.11.0
+sounddevice==0.5.3
+statsmodels==0.14.6
