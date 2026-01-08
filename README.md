@@ -18,13 +18,18 @@ The data for both studies can be downloaded from the [Open Science Framework](ht
 Once downloaded, the data should be placed in the project root directory with the following structure:
 
 ```
-DistanceNoise/
-├── data/
-│   ├── study1/              # Study 1 movement data (.csv files)
-│   ├── study2/              # Study 2 movement data (.csv files)
+Movement_Dynamics_In_Noise/
+├── final datasets/ # OIRs and movement data for mixed effects models 
+│   ├── study1/              # Final study 1 data
+│   ├── study2/              # Final study 2 data
+├── raw data/ # The original raw time series data
+│   ├── study1/              # Raw study 1 movement data (.csv files)
+│   ├── study2/              # Raw study 2 movement data (.csv files)
 │   └── study2_conditions.csv   # Conditions mapping for Study 2
-├── background_noises_study1/    # Study 1 audio stimuli
-├── background_noises_study2/    # Study 2 audio stimuli
+├── stimuli/    # Audio stimuli and background noise envelope information
+│   ├── study1/              # Study 1 stimuli (.wav and .csv files)
+│   ├── study2/              # Study 2 stimuli (.wav and .csv files)
+├── results/    # All preliminary datasets constructed using the analysis pipeline are placed here
 └── [other project files]
 ```
 
@@ -36,18 +41,18 @@ DistanceNoise/
    - RMS (Root Mean Square)
    - Complexity matching
    - RMS cross-correlation
-   - Outputs saved to [`results_study1/`](results_study1/)
+   - Outputs saved to [`results/study1/`](results/study1/)
 
 2. **[mergeDatasets.ipynb](mergeDatasets.ipynb)**: Merges movement data with OIRs (Other-initiated repair sequences) data
 
-3. **[R_MEMs_Combined.ipynb](R_MEMs_Combined.ipynb)**: Implements functionality from `lmerTest` and `ggplot2` to:
+3. **[R_MEMs.ipynb](R_MEMs.ipynb)**: Implements functionality from `lmerTest` and `ggplot2` to:
    - Run Mixed-Effects Models (MEMs)
    - Create visualizations for both studies
    - Generate figures for manuscript
 
 #### Stimuli Processing
 - **[dfaAudio.ipynb](dfaAudio.ipynb)**: Analyzes background noise audio files
-  - Processes audio from [`background_noises_study1/`](background_noises_study1/)
+  - Processes audio from [`stimuli/study1/`](stimuli/study1/)
 
 ### Study 2
 
@@ -57,7 +62,7 @@ DistanceNoise/
    - RMS (Root Mean Square)
    - Complexity matching
    - RMS cross-correlation
-   - Outputs saved to [`results_study2/`](results_study2/)
+   - Outputs saved to [`results/study2/`](results/study2/)
 
 2. **[mergeDatasets.ipynb](mergeDatasets.ipynb)**: Merges movement data with OIRs data
 
@@ -68,16 +73,16 @@ DistanceNoise/
 
 #### Stimuli Processing
 - **[dfaAudio.ipynb](dfaAudio.ipynb)**: Analyzes background noise audio files
-  - Processes audio from [`background_noises_study2/`](background_noises_study2/)
+  - Processes audio from [`stimuli/study2/`](stimuli/study2/)
 
 ### Supplementary Materials
-- **[R_MEMs_SuppMat.ipynb](R_MEMs_SuppMat.ipynb)**: This provides the statistical analyses and visualisations for information found in the supplementary materials of the paper listed below (Macpherson et al., submitted).
+- **[R_MEMs_Supplementary.ipynb](R_MEMs_Supplementary.ipynb)**: This provides the statistical analyses and visualisations for information found in the supplementary materials of the paper listed below (Macpherson et al., submitted).
 
 ### Output Folders
-- **[`results_study1/`](results_study1/)**: Saves DFA, RMS, OIRS data, and correlation analyses for Study 1
-- **[`results_study2/`](results_study2/)**: Saves DFA, RMS, OIRS data, and correlation analyses for Study 2
-- **[`figures_manuscript/`](figures_manuscript/)**: Figures for the main manuscript
-- **[`figures_supp/`](figures_supp/)**: Supplementary figures
+- **[`results/study1/`](results/study1/)**: Saves DFA, RMS, OIRS data, and correlation analyses for Study 1
+- **[`results/study2/`](results/study2/)**: Saves DFA, RMS, OIRS data, and correlation analyses for Study 2
+- **[`figures/manuscript/`](figures/manuscript/)**: Figures for the main manuscript
+- **[`figures/supp/`](figures/supplementary/)**: Supplementary figures
 
 ## Associated Publications
 Macpherson, M. C., Miles, K., Weisser, A., Luthy, B., Buchholz, J. M., Carlile, S., & Richardson, M. J. (submitted). Background noise shapes fractal dynamics and complexity matching during social interaction.

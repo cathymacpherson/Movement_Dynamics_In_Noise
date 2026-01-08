@@ -1,0 +1,18 @@
+# Ignore compiled Python bytecode
+utils/__pycache__/
+
+# Ignore virtual environment files
+.venv
+.env
+
+# Ignore data and stimuli folders from osf
+stimuli/
+raw data/
+final datasets/
+
+# Ignore jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore individual results files
+results/study1/*
+results/study2/*

@@ -8,22 +8,22 @@
 
 1. **Clone the repository** (if you haven't already):
    ```bash
-   git clone https://github.com/cathymacpherson/DistanceNoise.git
-   cd DistanceNoise
+   git clone https://github.com/cathymacpherson/Movement_Dynamics_In_Noise.git
+   cd Movement_Dynamics_In_Noise
    ```
 
 2. **Create a virtual environment**:
    
    **On Windows (Command Prompt):**
    ```cmd
-   python -m venv venv
-   venv\Scripts\activate.bat
+   python -m venv .venv
+   .venv\Scripts\activate.bat
    ```
    
    **On macOS/Linux:**
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate
+   python3 -m venv .venv
+   source .venv/bin/activate
    ```
 
 3. **Install required packages**:
