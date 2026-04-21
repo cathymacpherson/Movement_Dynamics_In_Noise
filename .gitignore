@@ -16,3 +16,6 @@ final datasets/
 # Ignore individual results files
 results/study1/*
 results/study2/*
+
+# Ignore workspaces
+*.code-workspace

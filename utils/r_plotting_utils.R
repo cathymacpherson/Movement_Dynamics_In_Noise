@@ -427,8 +427,7 @@ combine_study_plots <- function(plot1, plot2, filename) {
     ggtitle("Study 1") +
     theme(
       plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
-      plot.margin = margin(5, 15, 2, 5),  # Increased right margin from 2 to 15
-      legend.position = "none"
+      plot.margin = margin(5, 15, 2, 5)
     )
   
   p2_mod <- plot2 + 
@@ -444,7 +443,8 @@ combine_study_plots <- function(plot1, plot2, filename) {
   p_combined <- (p1_mod | p2_mod) +
     plot_layout(guides = "collect") &
     theme(
-      legend.position = "none"
+      legend.position = "bottom",
+      legend.justification = "center"
     )
   
   # Save
